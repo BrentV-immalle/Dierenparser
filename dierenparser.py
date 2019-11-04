@@ -1,4 +1,3 @@
-
 class Dier:
 
     def __init__(self):
@@ -9,7 +8,8 @@ class Dier:
         self.geluid = ""
 
     def print(self):
-        print(f'Het dier heet [{self.naam}], is van soort [{self.soort}], heeft [{self.aantalpoten}] poten, is [{self.kleur}] en maakt dit geluid: [{self.geluid}]!')    
+        print(
+            f'Het dier heet [{self.naam}], is van soort [{self.soort}], heeft [{self.aantalpoten}] poten, is [{self.kleur}] en maakt dit geluid: [{self.geluid}]!')
 
 
 def parse_line(line):
@@ -23,6 +23,7 @@ def parse_line(line):
     print(f'Parsed: [{naam}] [{soort}] [{aantalpoten}] [{kleur}] [{geluid}]')
     return d
 
+
 def parse_text(str):
     dieren = []
     for line in str.splitlines():
@@ -35,6 +36,10 @@ if __name__ == '__main__':
     dieren = []
     with open('dieren.txt', 'r') as f:
         dieren = parse_text(f.read())
-    
+
     for dier in dieren:
         dier.print()
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testfile("parse_line.txt")
