@@ -1,4 +1,3 @@
 >>> from dierenparser import parse_line
->>> parse_line("Witje - konijn - wit - geen")
-'Parsed: [Witje] [konijn] [wit] [geen]'
-...
+>>> parse_line("Sprinter - hond - 4 - bruin - Woef!")
+Dier(naam='Sprinter', soort='hond', aantalpoten=4, kleur='bruin', geluid='Woef!')
